@@ -1,0 +1,13 @@
+[Unit]
+Description=OSPF lab - restore virtual routers and FRRouting
+Wants=network-online.target
+After=network-online.target frr.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/ospf-lab/start-lab.sh
+RemainAfterExit=yes
+TimeoutStartSec=180
+
+[Install]
+WantedBy=multi-user.target

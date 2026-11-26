@@ -1,0 +1,13 @@
+[Unit]
+Description=OSPF lab - restore R2 Internet uplink and host NAT
+Requires=ospf-lab.service
+After=ospf-lab.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/ospf-lab/start-internet.sh
+RemainAfterExit=yes
+TimeoutStartSec=90
+
+[Install]
+WantedBy=multi-user.target

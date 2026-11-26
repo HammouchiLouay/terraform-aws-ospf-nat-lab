@@ -1,0 +1,25 @@
+# Credentials, state, editor settings, local caches
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!terraform.tfvars.example
+.terraform.tfstate.lock.info
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+*.tfplan
+terraform.tfstate.d/
+*.tar.gz
+*.zip
